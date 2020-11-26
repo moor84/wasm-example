@@ -1,1 +1,2 @@
-wasmtime web/wasm_example.wasm --invoke fibonacci 10
+echo "Result from Rust: "
+wasmtime wasm_example_rust.wasm --invoke fibonacci 10

@@ -1,7 +1,7 @@
 import wasmtime.loader
 
-# Assuming `wasm_example.wasm` is in the python load path...
-import wasm_example
+# Import `wasm_example_rust.wasm` from the current dirctory
+import wasm_example_rust
 
-fib = wasm_example.fibonacci(10)
-print(fib)
+fib_rust = wasm_example_rust.fibonacci(10)
+print(f'Result from Rust: {fib_rust}')

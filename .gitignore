@@ -1,4 +1,4 @@
-wasm_example.wasm
+*.wasm
 
 .pytest_cache
 .env
