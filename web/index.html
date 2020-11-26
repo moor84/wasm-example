@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>WebAssembly Example</title>
+  </head>
+  <body>
+   <script>
+     var importObject = {};
+     WebAssembly.instantiateStreaming(fetch('wasm_example.wasm'), importObject)
+      .then(wa => {
+        console.log(wa.instance.exports);
+        console.log(wa.instance.exports.fibonacci(10));
+        console.log(wa.instance.exports.will_return_nothing());
+        console.log(wa.instance.exports.will_panic([1, 2]));
+      });
+   </script>
+  </body>
+</html>
