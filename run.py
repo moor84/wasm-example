@@ -11,3 +11,5 @@ import wasm_example_bindgen
 
 fib_rust_b = wasm_example_bindgen.fibonacci(10)
 print(f'Result from Rust (wasm-pack): {fib_rust_b}')
+
+print(wasm_example_bindgen.will_return_string(0))

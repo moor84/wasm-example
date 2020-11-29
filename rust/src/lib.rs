@@ -1,12 +1,7 @@
 
 #[no_mangle]
-pub fn will_return_nothing() -> String {
+pub fn will_return_string() -> String {
     String::from("Hello from Rust")
-}
-
-#[no_mangle]
-pub fn will_panic(arr: &mut [u8]) {
-    arr[0] = 10;
 }
 
 #[no_mangle]

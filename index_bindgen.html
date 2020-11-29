@@ -7,18 +7,14 @@
   </head>
   <body>
     <script type="module">
-      import init, { fibonacci, will_modify } from './pkg/wasm_example_bindgen.js';
+      import init, { fibonacci, will_return_string } from './pkg/wasm_example_bindgen.js';
 
       async function run() {
         await init();
         
         console.log(fibonacci(10));
 
-        var arr = [0, 1, 2];
-        will_modify(arr);
-        conso.log(arr);
-
-        // console.log(fibonacci(10));
+        console.log(will_return_string());
       }
 
       run();

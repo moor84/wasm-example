@@ -9,10 +9,8 @@
    <script>
      WebAssembly.instantiateStreaming(fetch('wasm_example_rust.wasm'), {})
       .then(wa => {
-        console.log(wa.instance.exports);
         console.log(wa.instance.exports.fibonacci(10));
-        console.log(wa.instance.exports.will_return_nothing());
-        // console.log(wa.instance.exports.will_panic([1, 2]));
+        console.log(wa.instance.exports.will_return_string());
       });
    </script>
   </body>
