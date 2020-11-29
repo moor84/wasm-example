@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>WebAssembly Example</title>
+  </head>
+  <body>
+    <script type="module">
+      import init, { fibonacci, will_modify } from './pkg/wasm_example_bindgen.js';
+
+      async function run() {
+        await init();
+        
+        console.log(fibonacci(10));
+
+        var arr = [0, 1, 2];
+        will_modify(arr);
+        conso.log(arr);
+
+        // console.log(fibonacci(10));
+      }
+
+      run();
+    </script>
+  </body>
+</html>
